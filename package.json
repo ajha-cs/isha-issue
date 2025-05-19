@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "eslint-plugin-import": "^2.31.0"
+    "canes": "^5.16.1"
   }
 }
