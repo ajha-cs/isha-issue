@@ -18,7 +18,7 @@ jobs:
         run: mkdir install-dir
 
       - name: Copy package.json
-        run: cp package-lock.json package.json install-dir/
+        run: cp package.json install-dir/
 
       - name: Set up .npmrc for Cloudsmith registry
         working-directory: install-dir
@@ -30,4 +30,4 @@ jobs:
 
       - name: Install dependencies
         working-directory: install-dir
-        run: npm ci --legacy-peer-deps --verbose
+        run: npm install --legacy-peer-deps --verbose
