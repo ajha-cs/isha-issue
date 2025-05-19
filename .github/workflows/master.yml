@@ -18,7 +18,7 @@ jobs:
         run: mkdir install-dir
 
       - name: Copy package.json
-        run: cp package.json install-dir/
+        run: cp .npmrc package.json install-dir/
 
       - name: Set up .npmrc for Cloudsmith registry
         run: |
