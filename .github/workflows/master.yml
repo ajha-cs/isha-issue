@@ -18,9 +18,10 @@ jobs:
         run: mkdir install-dir
 
       - name: Copy package.json
-        run: cp .npmrc package.json install-dir/
+        run: cp package.json install-dir/
 
       - name: Set up .npmrc for Cloudsmith registry
+        working-directory: install-dir
         run: |
           echo "registry=https://npm.cloudsmith.io/orgcs/npmjsrepo/" > .npmrc
           echo "//npm.cloudsmith.io/orgcs/npmjsrepo/:_authToken=${CLOUDSMITH_NPM_TOKEN}" >> .npmrc
